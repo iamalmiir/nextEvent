@@ -5,12 +5,13 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Image from 'next/image';
 import CustomLogo from '../../public/nextJS.svg';
+import Link from 'next/link';
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static'>
         <Toolbar>
-          <Link href='/'>
+          <Link href='/' passHref>
             <Image src={CustomLogo} className='logoImg' alt='logo' />
           </Link>
           <Typography
