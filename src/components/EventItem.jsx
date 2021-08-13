@@ -4,6 +4,7 @@ import {
   CardContent,
   CardMedia,
   Button,
+  Divider,
   Typography,
 } from '@material-ui/core';
 import Link from 'next/link';
@@ -18,11 +19,7 @@ const EventItem = (props) => {
   const exploreLink = `/events/${id}`;
   return (
     <Card sx={{ maxWidth: 345, margin: '2rem' }}>
-      <CardMedia
-        sx={{ height: 200 }}
-        image={`/${image}`}
-        title='Contemplative Reptile'
-      />
+      <CardMedia sx={{ height: 200 }} image={`/${image}`} title={title} />
       <CardContent>
         <Typography gutterBottom variant='h5' component='div'>
           <strong>{title}</strong>
@@ -30,6 +27,7 @@ const EventItem = (props) => {
         <Typography variant='subtitle1' component='div'>
           {prettyDate}
         </Typography>
+        <Divider />
         <Typography variant='body2' color='text.secondary'>
           <strong>{prettyAddress}</strong>
         </Typography>

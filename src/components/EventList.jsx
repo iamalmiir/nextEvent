@@ -16,6 +16,7 @@ const EventList = (props) => {
             date={item.date}
             location={item.location}
             image={item.image}
+            id={item.id}
           />
         </Grid>
       ))}
