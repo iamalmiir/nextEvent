@@ -10,7 +10,9 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static'>
         <Toolbar>
-          <Image src={CustomLogo} className='logoImg' alt='logo' />
+          <Link href='/'>
+            <Image src={CustomLogo} className='logoImg' alt='logo' />
+          </Link>
           <Typography
             variant='h6'
             style={{ color: '#61DAFB' }}
