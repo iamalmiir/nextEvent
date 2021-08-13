@@ -1,0 +1,19 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.59999 124">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #61dafb;
+      }
+    </style>
+  </defs>
+  <g id="Page-1">
+    <g id="Black-Next.js">
+      <g id="next-black">
+        <g id="EXT-_-Type-something" data-name="EXT-+-Type-something">
+          <path id="EXT" class="cls-1" d="M60.5,32.3h39v3.1H64V58.6H97.3v3.1H64V87.2H99.8v3.1H60.5Zm42.4,0H107l18.3,25.5L144,32.3,169.6,0,127.7,60.5l21.6,29.8H145L125.4,63.2,105.7,90.3h-4.2l21.8-29.8Zm48,3.1V32.3h44.4v3.1H174.8V90.2h-3.6V35.4Z" transform="translate(-11.7)"/>
+          <polygon id="Type-something" class="cls-1" points="0 32.3 4.5 32.3 66 124 40.6 90.2 3.8 36.7 3.6 90.2 0 90.2 0 32.3"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

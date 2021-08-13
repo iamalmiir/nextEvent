@@ -1,14 +1,25 @@
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../public//fonts//inconsolata-v21-latin-300.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Inconsolata' !important;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  border-radius: 5px;
+  width: 100px;
 }
 
 * {
