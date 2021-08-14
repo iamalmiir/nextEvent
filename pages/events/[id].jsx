@@ -18,7 +18,7 @@ const EventItemId = (props) => {
     return (
       <Paper
         sx={{
-          p: 2,
+          p: 1,
           margin: 'auto',
           marginTop: '2rem',
           maxWidth: 900,
