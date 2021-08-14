@@ -30,14 +30,14 @@ const EventItem = (props) => {
         <Typography variant='subtitle1' component='div'>
           <Grid container>
             <TodayIcon style={{ marginRight: '0.5rem' }} />
-            {prettyDate}
+            <strong>{prettyDate}</strong>
           </Grid>
         </Typography>
         <Divider />
         <Typography variant='body2' color='text.secondary'>
           <Grid container>
             <MyLocationIcon style={{ marginRight: '0.5rem' }} />
-            <strong>{prettyAddress}</strong>
+            <em>{prettyAddress}</em>
           </Grid>
         </Typography>
       </CardContent>

@@ -45,7 +45,11 @@ const EventItemId = (props) => {
             Go Back
           </Button>
         </Link>
-        <Grid container spacing={{ xs: 2, md: 2 }}>
+        <Grid
+          container
+          spacing={{ xs: 2, md: 2 }}
+          sx={{ width: { xs: 400, sm: 600, md: 880 }, height: 410 }}
+        >
           <Grid item>
             <ButtonBase
               sx={{ width: { xs: 400, sm: 600, md: 880 }, height: 400 }}
@@ -72,12 +76,10 @@ const EventItemId = (props) => {
                   </Grid>
                 </Typography>
                 <Divider />
-                <Typography variant='h5' gutterBottom>
+                <Typography variant='p' gutterBottom>
                   <Grid container>
-                    <MyLocationIcon
-                      style={{ marginRight: '0.5rem', marginTop: '0.3rem' }}
-                    />
-                    <e>{prettyAddress}</e>
+                    <MyLocationIcon style={{ marginRight: '0.5rem' }} />
+                    <em>{prettyAddress}</em>
                   </Grid>
                 </Typography>
                 <Typography
@@ -115,11 +117,11 @@ const EventItemId = (props) => {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid item>
+            {/* <Grid item>
               <Typography variant='subtitle1' component='div'>
                 {sEvent.price}
               </Typography>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
       </Paper>
