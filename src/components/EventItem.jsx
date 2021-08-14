@@ -5,8 +5,11 @@ import {
   CardMedia,
   Button,
   Divider,
+  Grid,
   Typography,
 } from '@material-ui/core';
+import TodayIcon from '@material-ui/icons/Today';
+import MyLocationIcon from '@material-ui/icons/MyLocation';
 import Link from 'next/link';
 const EventItem = (props) => {
   const { title, date, location, image, id } = props;
@@ -25,11 +28,17 @@ const EventItem = (props) => {
           <strong>{title}</strong>
         </Typography>
         <Typography variant='subtitle1' component='div'>
-          {prettyDate}
+          <Grid container>
+            <TodayIcon style={{ marginRight: '0.5rem' }} />
+            {prettyDate}
+          </Grid>
         </Typography>
         <Divider />
         <Typography variant='body2' color='text.secondary'>
-          <strong>{prettyAddress}</strong>
+          <Grid container>
+            <MyLocationIcon style={{ marginRight: '0.5rem' }} />
+            <em>{prettyAddress}</em>
+          </Grid>
         </Typography>
       </CardContent>
       <CardActions style={{ float: 'right' }}>

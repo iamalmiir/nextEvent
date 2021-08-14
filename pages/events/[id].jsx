@@ -5,6 +5,8 @@ import {
   Paper,
   Divider,
 } from '@material-ui/core';
+import TodayIcon from '@material-ui/icons/Today';
+import MyLocationIcon from '@material-ui/icons/MyLocation';
 import { useRouter } from 'next/router';
 import { getEventById } from '../../dummydb';
 import EventItem from '../../src/components/EventItem';
@@ -20,6 +22,7 @@ const EventItemId = (props) => {
       month: 'long',
       year: 'numeric',
     });
+    const prettyAddress = sEvent.location.replace(', ', '\n');
     return (
       <Paper
         sx={{
@@ -49,12 +52,29 @@ const EventItemId = (props) => {
                   {sEvent.title}
                 </Typography>
                 <Typography variant='h5' gutterBottom>
-                  {prettyDate}
-                </Typography>
-                <Typography variant='h6' color='text.secondary'>
-                  {sEvent.description}
+                  <Grid container>
+                    <TodayIcon
+                      style={{ marginRight: '0.5rem', marginTop: '0.3rem' }}
+                    />
+                    <strong>{prettyDate}</strong>
+                  </Grid>
                 </Typography>
                 <Divider />
+                <Typography variant='h5' gutterBottom>
+                  <Grid container>
+                    <MyLocationIcon
+                      style={{ marginRight: '0.5rem', marginTop: '0.3rem' }}
+                    />
+                    <e>{prettyAddress}</e>
+                  </Grid>
+                </Typography>
+                <Typography
+                  variant='h6'
+                  color='text.secondary'
+                  style={{ marginTop: '3rem' }}
+                >
+                  {sEvent.description}
+                </Typography>
               </Grid>
               <Grid item>
                 <Typography
