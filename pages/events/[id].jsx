@@ -86,7 +86,7 @@ const EventItemId = (props) => {
                   {sEvent.description}
                 </Typography>
               </Grid>
-              <Grid item>
+              <Grid item style={{ marginBottom: '2rem' }}>
                 <Typography
                   sx={{
                     cursor: 'pointer',
