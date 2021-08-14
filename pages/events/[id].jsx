@@ -15,6 +15,11 @@ const EventItemId = (props) => {
   const getEventId = router.query.id;
   const sEvent = getEventById(getEventId);
   if (sEvent) {
+    const prettyDate = new Date(sEvent.date).toLocaleDateString('en-US', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
     return (
       <Paper
         sx={{
@@ -44,7 +49,7 @@ const EventItemId = (props) => {
                   {sEvent.title}
                 </Typography>
                 <Typography variant='h5' gutterBottom>
-                  {sEvent.date}
+                  {prettyDate}
                 </Typography>
                 <Typography variant='h6' color='text.secondary'>
                   {sEvent.description}
