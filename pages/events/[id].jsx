@@ -28,7 +28,7 @@ const EventItemId = (props) => {
         <Grid container spacing={{ xs: 2, md: 2 }}>
           <Grid item>
             <ButtonBase
-              sx={{ width: { xs: 300, sm: 600, md: 880 }, height: 400 }}
+              sx={{ width: { xs: 400, sm: 600, md: 880 }, height: 400 }}
             >
               <Image
                 src={`/${sEvent.image}`}
