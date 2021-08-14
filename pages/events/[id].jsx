@@ -37,7 +37,7 @@ const EventItemId = (props) => {
       >
         <Button
           variant='contained'
-          style={{ marginBottom: '0.5rem', color: '#61DAFB' }}
+          style={{ marginBottom: '0.5rem', color: '#61DAFB  ' }}
         >
           <Link href='/' style={{ color: 'buttoncolor' }}>
             Go Back
