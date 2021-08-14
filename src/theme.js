@@ -14,6 +14,9 @@ const theme = createTheme({
     error: {
       main: red.A400,
     },
+    buttoncolor: {
+      main: '#61DAFB',
+    },
   },
   typography: {
     fontFamily: 'Inconsolata',

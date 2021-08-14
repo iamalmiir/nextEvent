@@ -4,11 +4,13 @@ import {
   ButtonBase,
   Paper,
   Divider,
+  Button,
 } from '@material-ui/core';
 import TodayIcon from '@material-ui/icons/Today';
 import MyLocationIcon from '@material-ui/icons/MyLocation';
 import { useRouter } from 'next/router';
 import { getEventById } from '../../dummydb';
+import Link from 'next/link';
 import EventItem from '../../src/components/EventItem';
 import Image from 'next/image';
 
@@ -33,6 +35,14 @@ const EventItemId = (props) => {
           flexGrow: 1,
         }}
       >
+        <Button
+          variant='contained'
+          style={{ marginBottom: '0.5rem', color: '#61DAFB' }}
+        >
+          <Link href='/' style={{ color: 'buttoncolor' }}>
+            Go Back
+          </Link>
+        </Button>
         <Grid container spacing={{ xs: 2, md: 2 }}>
           <Grid item>
             <ButtonBase
