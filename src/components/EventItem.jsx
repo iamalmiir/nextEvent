@@ -37,16 +37,24 @@ const EventItem = (props) => {
         <Typography variant='body2' color='text.secondary'>
           <Grid container>
             <MyLocationIcon style={{ marginRight: '0.5rem' }} />
-            <em>{prettyAddress}</em>
+            <strong>{prettyAddress}</strong>
           </Grid>
         </Typography>
       </CardContent>
-      <CardActions style={{ float: 'right' }}>
-        <Button variant='contained' style={{ color: '#61DAFB' }}>
-          <Link href={exploreLink} passHref>
+      <CardActions>
+        <Link href={exploreLink} passHref>
+          <Button
+            variant='contained'
+            style={{
+              color: '#61DAFB',
+              display: 'block',
+              width: '100%',
+              textAlign: 'center',
+            }}
+          >
             <strong>Explore Event</strong>
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </CardActions>
     </Card>
   );

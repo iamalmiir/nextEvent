@@ -9,9 +9,10 @@ import {
 import TodayIcon from '@material-ui/icons/Today';
 import MyLocationIcon from '@material-ui/icons/MyLocation';
 import { useRouter } from 'next/router';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import DeleteIcon from '@material-ui/icons/Delete';
 import { getEventById } from '../../dummydb';
 import Link from 'next/link';
-import EventItem from '../../src/components/EventItem';
 import Image from 'next/image';
 
 const EventItemId = (props) => {
@@ -35,14 +36,15 @@ const EventItemId = (props) => {
           flexGrow: 1,
         }}
       >
-        <Button
-          variant='contained'
-          style={{ marginBottom: '0.5rem', color: '#61DAFB  ' }}
-        >
-          <Link href='/' style={{ color: 'buttoncolor' }}>
+        <Link href='/' style={{ color: 'buttoncolor' }}>
+          <Button
+            variant='contained'
+            startIcon={<ArrowBackIosIcon />}
+            style={{ marginBottom: '0.5rem', color: '#61DAFB  ' }}
+          >
             Go Back
-          </Link>
-        </Button>
+          </Button>
+        </Link>
         <Grid container spacing={{ xs: 2, md: 2 }}>
           <Grid item>
             <ButtonBase
@@ -86,7 +88,7 @@ const EventItemId = (props) => {
                   {sEvent.description}
                 </Typography>
               </Grid>
-              <Grid item style={{ marginBottom: '2rem' }}>
+              <Grid item>
                 <Typography
                   sx={{
                     cursor: 'pointer',
@@ -95,7 +97,14 @@ const EventItemId = (props) => {
                   }}
                   variant='body2'
                 >
-                  Remove
+                  <Grid container>
+                    <Button
+                      style={{ color: '#e91e63' }}
+                      startIcon={<DeleteIcon />}
+                    >
+                      Remove
+                    </Button>
+                  </Grid>
                 </Typography>
                 <Typography
                   variant='body2'
