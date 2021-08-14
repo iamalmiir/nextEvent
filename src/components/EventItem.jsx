@@ -43,15 +43,7 @@ const EventItem = (props) => {
       </CardContent>
       <CardActions>
         <Link href={exploreLink} passHref>
-          <Button
-            variant='contained'
-            style={{
-              color: '#61DAFB',
-              display: 'block',
-              width: '100%',
-              textAlign: 'center',
-            }}
-          >
+          <Button variant='outlined' fullWidth>
             <strong>Explore Event</strong>
           </Button>
         </Link>

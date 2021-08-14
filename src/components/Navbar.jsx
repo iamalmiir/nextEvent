@@ -37,10 +37,10 @@ ElevationScroll.propTypes = {
 
 export default function ButtonAppBar(props) {
   return (
-    <Box sx={{ flexGrow: 1, marginBottom: '5rem' }}>
+    <Box sx={{ flexGrow: 1, margin: 'auto', marginBottom: '5rem' }}>
       <ElevationScroll {...props}>
         <AppBar>
-          <Toolbar>
+          <Toolbar style={{ margin: 'auto' }}>
             <Link href='/' passHref>
               <Image src={CustomLogo} className='logoImg' alt='logo' />
             </Link>
@@ -52,9 +52,6 @@ export default function ButtonAppBar(props) {
             >
               Event
             </Typography>
-            <Button style={{ color: '#61DAFB' }}>
-              <strong>Login</strong>
-            </Button>
           </Toolbar>
         </AppBar>
       </ElevationScroll>

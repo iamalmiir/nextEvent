@@ -1,3 +1,5 @@
+import { useRef, useState } from 'react';
+
 import {
   FormControl,
   InputLabel,
@@ -10,17 +12,38 @@ import {
 import months from '../../months';
 
 const CustomizedFormControl = (props) => {
+  const [year, setYear] = useState('');
+
+  const handleYear = (event) => {
+    setYear(event.target.value);
+  };
+  const [month, setMonth] = useState('');
+  const handleMonth = (event) => {
+    setMonth(event.target.value);
+  };
+
+  const yearInput = useRef();
+  const monthInput = useRef();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const selectedYear = year;
+    const selectedMonth = month;
+
+    props.onSearch(selectedYear, selectedMonth);
+  };
+
   return (
     <Box
+      component='form'
       sx={{
         minWidth: 120,
         maxWidth: 300,
         padding: '2rem',
-        // backgroundColor: 'rgba(53, 63, 79, 0.7)',
         margin: 'auto',
         textAlign: 'center',
         border: '1px solid #e3e5e8',
       }}
+      onSubmit={handleSubmit}
     >
       <Typography variant='h6' component='h1'>
         Filter Events
@@ -30,9 +53,9 @@ const CustomizedFormControl = (props) => {
         <Select
           labelId='demo-simple-select-label'
           id='demo-simple-select'
-          value={props.year}
+          value={year}
           label='Year'
-          //   onChange={handleChange}
+          onChange={handleYear}
         >
           <MenuItem value={2021}>2021</MenuItem>
           <MenuItem value={2022}>2022</MenuItem>
@@ -43,9 +66,9 @@ const CustomizedFormControl = (props) => {
         <Select
           labelId='month'
           id='month'
-          value={props.month}
+          value={month}
           label='Month'
-          //   onChange={handleChange}
+          onChange={handleMonth}
         >
           {months.map((month) => (
             <MenuItem value={month.value} key={month.value}>
@@ -54,15 +77,15 @@ const CustomizedFormControl = (props) => {
           ))}
         </Select>
       </FormControl>
-      <Button fullWidth variant='outlined'>
+      <Button type='submit' fullWidth variant='outlined'>
         Find Event
       </Button>
     </Box>
   );
 };
 
-const EventSearch = () => {
-  return <CustomizedFormControl />;
+const EventSearch = (props) => {
+  return <CustomizedFormControl onSearch={props.onSearch} />;
 };
 
 export default EventSearch;
