@@ -43,7 +43,7 @@ export default function ButtonAppBar(props) {
               component='div'
               sx={{ flexGrow: 1 }}
             >
-              Event
+              Events
             </Typography>
           </Toolbar>
         </AppBar>
