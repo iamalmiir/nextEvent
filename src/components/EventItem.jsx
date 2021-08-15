@@ -34,7 +34,7 @@ const EventItem = (props) => {
           </Grid>
         </Typography>
         <Divider />
-        <Typography variant='body2' color='text.secondary'>
+        <Typography variant='div' color='text.secondary'>
           <Grid container>
             <MyLocationIcon style={{ marginRight: '0.5rem' }} />
             <em>{prettyAddress}</em>

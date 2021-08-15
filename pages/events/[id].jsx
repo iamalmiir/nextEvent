@@ -36,7 +36,7 @@ const EventItemId = (props) => {
           flexGrow: 1,
         }}
       >
-        <Link href='/' style={{ color: 'buttoncolor' }}>
+        <Link href='/' passHref style={{ color: 'buttoncolor' }}>
           <Button
             variant='contained'
             startIcon={<ArrowBackIosIcon />}
@@ -64,10 +64,10 @@ const EventItemId = (props) => {
           <Grid item xs={12} sm container>
             <Grid item xs container direction='column' spacing={2}>
               <Grid item xs>
-                <Typography gutterBottom variant='h3' component='div'>
+                <Typography gutterBottom variant='h3' component='h1'>
                   {sEvent.title}
                 </Typography>
-                <Typography variant='h5' gutterBottom>
+                <Typography variant='div' gutterBottom>
                   <Grid container>
                     <TodayIcon
                       style={{ marginRight: '0.5rem', marginTop: '0.3rem' }}
@@ -76,14 +76,14 @@ const EventItemId = (props) => {
                   </Grid>
                 </Typography>
                 <Divider />
-                <Typography variant='p' gutterBottom>
+                <Typography variant='div' gutterBottom>
                   <Grid container>
                     <MyLocationIcon style={{ marginRight: '0.5rem' }} />
                     <em>{prettyAddress}</em>
                   </Grid>
                 </Typography>
                 <Typography
-                  variant='h6'
+                  variant='div'
                   color='text.secondary'
                   style={{ marginTop: '3rem' }}
                 >
@@ -91,23 +91,6 @@ const EventItemId = (props) => {
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography
-                  sx={{
-                    cursor: 'pointer',
-                    float: 'right',
-                    color: '#e91e63',
-                  }}
-                  variant='body2'
-                >
-                  <Grid container>
-                    <Button
-                      style={{ color: '#e91e63' }}
-                      startIcon={<DeleteIcon />}
-                    >
-                      Remove
-                    </Button>
-                  </Grid>
-                </Typography>
                 <Typography
                   variant='body2'
                   color='secondary'

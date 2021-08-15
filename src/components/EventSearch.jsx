@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 import {
   FormControl,
@@ -21,9 +21,6 @@ const CustomizedFormControl = (props) => {
   const handleMonth = (event) => {
     setMonth(event.target.value);
   };
-
-  const yearInput = useRef();
-  const monthInput = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
     const selectedYear = year;
