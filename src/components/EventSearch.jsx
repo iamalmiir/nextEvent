@@ -50,6 +50,7 @@ const CustomizedFormControl = (props) => {
         <Select
           labelId='demo-simple-select-label'
           id='demo-simple-select'
+          required
           value={year}
           label='Year'
           onChange={handleYear}
@@ -64,6 +65,7 @@ const CustomizedFormControl = (props) => {
           labelId='month'
           id='month'
           value={month}
+          required
           label='Month'
           onChange={handleMonth}
         >
